@@ -2,7 +2,23 @@ import json
 
 
 # TODO Complete!
+
+
+def impar(lista,cont):
+    impar=[]
+    par=[]
+    if cont == 0:
+        return lista[cont]
+    
+    elif lista[cont] % 2 == 0:
+        
+        par.append(lista[cont])
+
+    else:
+        impar.append(lista[cont])
+    return impar(lista,cont+1)
 def arrange(numbers):
+    
     return numbers
 
 
