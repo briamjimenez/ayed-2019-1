@@ -4,22 +4,24 @@ import json
 # TODO Complete!
 
 
-def impar(lista,cont):
-    impar=[]
-    par=[]
-    if cont == 0:
-        return lista[cont]
-    
-    elif lista[cont] % 2 == 0:
-        
-        par.append(lista[cont])
+from sys import stdin
 
-    else:
-        impar.append(lista[cont])
-    return impar(lista,cont+1)
-def arrange(numbers):
-    
-    return numbers
+def cadena(lista):
+    pares=[]
+    impares=[]
+    for i in lista:
+        if i%2==0:
+            pares.append(i)
+        else:
+            impares.append(i)
+
+    return pares+impares
+def main():
+    lista=[int(x) for x in stdin.readline().strip().split(",")]
+    print(cadena(lista))
+
+
+main()
 
 
 if __name__ == '__main__':
