@@ -1,5 +1,8 @@
 from sys import stdin
-def get_fibonacci_huge(n, m):
+import time 
+
+
+def fibonacci(n, m):
     if n <= 1:
         return n
     array= [0, 1]
@@ -15,8 +18,12 @@ def get_fibonacci_huge(n, m):
             return array[index]
     return normalMod
 def main():
+    stard=time.time()
     n=int(stdin.readline().strip())
     m=int(stdin.readline().strip())
-    print(get_fibonacci_huge(n,m))
+    print(fibonacci(n,m))
+    end=time.time()
+    p=end-stard
+    print("El tiempo es : "+str(p/1000))
 main()
 
