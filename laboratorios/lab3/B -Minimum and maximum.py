@@ -1,5 +1,5 @@
 from sys import stdin
-
+import time 
 
 def mergeSort(lista):
     if len(lista)>1:
@@ -29,7 +29,12 @@ def mergeSort(lista):
             k=k+1
 
 def main():
+    stard=time.time()
+    num=int(stdin.readline().strip())
     lista = [int(x)for x in stdin.readline().strip().split(" ")]
     mergeSort(lista)
     print(str(min(*lista))+" "+str(max(*lista)))
+    end=time.time()
+    p=end-stard
+    print("el tiempo es: "+str(p/1000))
 main()
